@@ -1,0 +1,1094 @@
+<h2>Introduction to SQL</h2> 
+
+<p>
+<b>SQL</b> stands for <b>Structured Query Language</b>.
+It is the standard language used for storing, manipulating, and retrieving data in a database.
+</p>
+
+<p>
+SQL became a standard of the <b>American National Standards Institute (ANSI)</b> in 1986
+and the <b>International Organization for Standardization (ISO)</b> in 1987.
+</p>
+
+<p>
+SQL is a standard language for accessing and manipulating databases.
+</p>
+
+<hr>
+
+<h3>What is SQL?</h3>
+<ul>
+  <li>SQL stands for Structured Query Language</li>
+  <li>SQL lets you access and manipulate databases</li>
+  <li>SQL became a standard of ANSI in 1986</li>
+  <li>SQL became a standard of ISO in 1987</li>
+</ul>
+
+<hr>
+
+<h3>What Can SQL Do?</h3>
+<ul>
+  <li>Execute queries against a database</li>
+  <li>Retrieve data from a database</li>
+  <li>Insert records into a database</li>
+  <li>Update records in a database</li>
+  <li>Delete records from a database</li>
+  <li>Create new tables in a database</li>
+  <li>Create views in a database</li>
+</ul>
+
+<hr>
+
+<h3>Some of the Most Important SQL Commands</h3>
+<ul>
+  <li><b>SELECT</b> – Extracts data from a database</li>
+  <li><b>INSERT INTO</b> – Inserts new data into a database</li>
+  <li><b>UPDATE</b> – Updates data in a database</li>
+  <li><b>DELETE</b> – Deletes data from a database</li>
+  <li><b>CREATE DATABASE</b> – Creates a new database</li>
+  <li><b>ALTER DATABASE</b> – Modifies a database</li>
+  <li><b>CREATE TABLE</b> – Creates a new table</li>
+  <li><b>ALTER TABLE</b> – Modifies a table</li>
+  <li><b>DROP TABLE</b> – Deletes a table</li>
+  <li><b>CREATE INDEX</b> – Creates an index</li>
+  <li><b>DROP INDEX</b> – Deletes an index</li>
+</ul>
+
+<hr>
+
+<h3>SQL SELECT Statement</h3>
+<p>
+The <b>SELECT</b> statement is used to select data from a database.
+</p>
+
+<b>Syntax:</b>
+<pre>SELECT column1, column2 FROM table_name;</pre>
+
+<b>Example:</b>
+<pre>SELECT ENAME, JOB FROM EMP;</pre>
+
+<hr>
+
+<h3>SELECT DISTINCT</h3>
+<p>
+The <b>SELECT DISTINCT</b> statement is used to return only distinct values.
+</p>
+
+<b>Syntax:</b>
+<pre>SELECT DISTINCT column1 FROM table_name;</pre>
+
+<b>Example:</b>
+<pre>SELECT DISTINCT SAL FROM EMP;</pre>
+
+<hr>
+
+<h3>SQL WHERE Clause</h3>
+<p>
+The <b>WHERE</b> clause is used to filter records based on a specified condition.
+</p>
+
+<b>Syntax:</b>
+<pre>SELECT * FROM table_name WHERE condition;</pre>
+
+<b>Example:</b>
+<pre>SELECT * FROM EMP WHERE DEPTNO = 10;</pre>
+
+<p>
+<b>Operators used in WHERE clause:</b><br>
+&lt;, &gt;, &lt;=, &gt;=, &lt;&gt;, LIKE, BETWEEN, IN
+</p>
+
+<hr>
+
+<h3>SQL ORDER BY</h3>
+<p>
+The <b>ORDER BY</b> keyword is used to sort the result-set in ascending or descending order.
+</p>
+
+<hr>
+
+<h3>SQL AND / OR Operators</h3>
+<p>
+The <b>AND</b> and <b>OR</b> operators are used to filter records based on more than one condition.
+</p>
+
+<b>AND Syntax:</b>
+<pre>
+SELECT * FROM table_name
+WHERE condition1 AND condition2;
+</pre>
+
+<b>Example:</b>
+<pre>
+SELECT * FROM EMP
+WHERE DEPTNO = 10 AND ENAME LIKE 'K%';
+</pre>
+
+<b>OR Syntax:</b>
+<pre>
+SELECT * FROM table_name
+WHERE condition1 OR condition2;
+</pre>
+
+<b>Example:</b>
+<pre>
+SELECT * FROM EMP
+WHERE DEPTNO = 10 OR DEPTNO = 20;
+</pre>
+
+<p>
+<b>AND</b> operator returns records if all conditions are TRUE.<br>
+<b>OR</b> operator returns records if any condition is TRUE.
+</p>
+
+<hr>
+
+<h3>SQL NOT Operator</h3>
+<p>
+The <b>NOT</b> operator is used to exclude records that meet a condition.
+</p>
+
+<b>Syntax:</b>
+<pre>SELECT * FROM table_name WHERE NOT condition;</pre>
+
+<b>Example:</b>
+<pre>SELECT * FROM EMP WHERE NOT DEPTNO = 10;</pre>
+
+
+make advance style or fonts with css use inline css
+
+
+body {
+  background-color: #f7f9fc;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 20px;
+}
+
+
+h2 {
+  color: #1f4fb2;
+  font-weight: 600;
+  border-bottom: 3px solid #1f4fb2;
+  padding-bottom: 8px;
+  margin: 22px 0 14px;
+}
+
+
+h3 {
+  color: #2c6db8;
+  background: #eef3fb;
+  border-left: 5px solid #2c6db8;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 28px 0 12px;
+  font-weight: 600;
+}
+
+
+p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+
+b {
+  color: #1f4fb2;
+}
+
+
+ul, ol {
+  margin-left: 24px;
+  padding-left: 6px;
+}
+
+ul li, ol li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+
+pre {
+  background: #f1f4f9;
+  /* border-left: 4px solid #1f4fb2; */
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-family: Consolas, monospace;
+}
+
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+/
+
+ <h2>SQL Sub Languages</h2> 
+
+<p>
+SQL is divided into <b>five sub languages</b>, each used for a specific purpose
+in database management.
+</p>
+
+<h3>SQL is Divided into 5 Sub Languages</h3>
+<ol>
+  <li><b>DDL</b> – Data Definition Language</li>
+  <li><b>DML</b> – Data Manipulation Language</li>
+  <li><b>TCL</b> – Transaction Control Language</li>
+  <li><b>DRL</b> – Data Retrieval Language</li>
+  <li><b>DCL</b> – Data Control Language</li>
+</ol>
+
+<hr>
+
+<h2>1. DDL – Data Definition Language</h2>
+
+<p>
+DDL commands are used to <b>create, modify, and delete database objects</b>
+such as tables, views, and indexes.
+</p>
+
+<p>
+<b>DDL Commands:</b> CREATE, ALTER, DROP, TRUNCATE, RENAME, FLASHBACK, PURGE
+</p>
+
+<h3>CREATE Statement</h3>
+<p>
+The <b>CREATE</b> statement is used to create new database objects.
+</p>
+
+<b>CREATE TABLE Syntax:</b>
+<pre>
+CREATE TABLE table_name (
+  column1 datatype,
+  column2 datatype,
+  column3 datatype
+);
+</pre>
+
+<b>Example:</b>
+<pre>
+CREATE TABLE EMP (
+  EMPNO    NUMBER(4),
+  ENAME    VARCHAR2(30),
+  JOB      VARCHAR2(30),
+  MGR      NUMBER(4),
+  HIREDATE DATE,
+  SAL      NUMBER(4),
+  COMM     NUMBER(4),
+  DEPTNO   NUMBER(3)
+);
+</pre>
+
+<h3>ALTER Statement</h3>
+<p>
+The <b>ALTER</b> statement is used to modify the structure of an existing table.
+</p>
+
+<b>Syntax:</b>
+<pre>ALTER TABLE table_name ADD column_name datatype;</pre>
+
+<b>Example:</b>
+<pre>ALTER TABLE EMP ADD EMAIL VARCHAR2(50);</pre>
+
+<h3>DROP Statement</h3>
+<p>
+The <b>DROP</b> statement is used to permanently delete a table.
+</p>
+
+<b>Syntax:</b>
+<pre>DROP TABLE table_name;</pre>
+
+<b>Example:</b>
+<pre>DROP TABLE EMP;</pre>
+
+<h3>TRUNCATE Statement</h3>
+<p>
+The <b>TRUNCATE</b> statement removes all records from a table,
+but the table structure remains.
+</p>
+
+<b>Syntax:</b>
+<pre>TRUNCATE TABLE table_name;</pre>
+
+<b>Example:</b>
+<pre>TRUNCATE TABLE EMP;</pre>
+
+<h3>RENAME Statement</h3>
+<p>
+The <b>RENAME</b> statement is used to change the name of a table.
+</p>
+
+<b>Syntax:</b>
+<pre>RENAME old_table_name TO new_table_name;</pre>
+
+<b>Example:</b>
+<pre>RENAME EMP TO EMPLOYEE;</pre>
+
+<h3>FLASHBACK Statement</h3>
+<p>
+The <b>FLASHBACK</b> statement is used to restore a dropped table.
+</p>
+
+<b>Syntax:</b>
+<pre>FLASHBACK TABLE table_name TO BEFORE DROP;</pre>
+
+<b>Example:</b>
+<pre>FLASHBACK TABLE EMP TO BEFORE DROP;</pre>
+
+<h3>PURGE Statement</h3>
+<p>
+The <b>PURGE</b> statement permanently deletes a table from the recycle bin.
+</p>
+
+<b>Syntax:</b>
+<pre>PURGE TABLE table_name;</pre>
+
+<b>Example:</b>
+<pre>PURGE TABLE EMP;</pre>
+
+<hr>
+
+<h2>2. DML – Data Manipulation Language</h2>
+
+<p>
+DML commands are used to <b>manage data stored in tables</b>.
+</p>
+
+<p>
+<b>DML Commands:</b> INSERT, UPDATE, DELETE, MERGE
+</p>
+
+<h3>INSERT INTO Statement</h3>
+<p>
+The <b>INSERT INTO</b> statement is used to add new records into a table.
+</p>
+
+<b>Method 1: Insert values for all columns</b>
+<pre>
+INSERT INTO table_name VALUES (value1, value2, value3);
+</pre>
+
+<b>Example:</b>
+<pre>
+INSERT INTO EMP
+VALUES (7879, 'DEV', 'ACTING', 7788, DATE '2025-12-14', 5632, NULL, 20);
+</pre>
+
+<b>Method 2: Insert values by specifying column names</b>
+<pre>
+INSERT INTO table_name (column1, column2)
+VALUES (value1, value2);
+</pre>
+
+<b>Example:</b>
+<pre>
+INSERT INTO EMP (ENAME, SAL, DEPTNO)
+VALUES ('DEV', 35000, 10);
+</pre>
+
+<h3>UPDATE Statement</h3>
+<p>
+The <b>UPDATE</b> statement is used to modify existing records in a table.
+</p>
+
+<b>Syntax:</b>
+<pre>
+UPDATE table_name
+SET column1 = value1
+WHERE condition;
+</pre>
+
+<b>Example:</b>
+<pre>UPDATE EMP SET SAL = 2000 WHERE ENAME = 'SMITH';</pre>
+
+<p>
+<b>Important:</b> Always use a WHERE clause to avoid updating all rows.
+</p>
+
+<h3>DELETE Statement</h3>
+<p>
+The <b>DELETE</b> statement is used to delete records from a table.
+</p>
+
+<b>Syntax:</b>
+<pre>DELETE FROM table_name WHERE condition;</pre>
+
+<b>Example:</b>
+<pre>DELETE FROM EMP WHERE ENAME = 'SMITH';</pre>
+
+<p>
+<b>Important:</b> Without WHERE clause, all rows will be deleted.
+</p>
+
+<hr>
+
+<h2>3. TCL – Transaction Control Language</h2>
+
+<p>
+TCL commands are used to manage transactions in a database.
+</p>
+
+<p>
+<b>TCL Commands:</b> COMMIT, ROLLBACK, SAVEPOINT
+</p>
+
+<h3>COMMIT Statement</h3>
+<p>
+Saves all changes permanently in the database.
+</p>
+
+<pre>COMMIT;</pre>
+
+<h3>ROLLBACK Statement</h3>
+<p>
+Undoes changes that are not yet committed.
+</p>
+
+<pre>ROLLBACK;</pre>
+
+<h3>SAVEPOINT Statement</h3>
+<p>
+Sets a save point in a transaction to which we can rollback later.
+</p>
+
+<pre>
+SAVEPOINT sp1;
+ROLLBACK TO sp1;
+</pre>
+
+
+
+body {
+  background-color: #f7f9fc;
+}
+
+
+h2 {
+  color: #1f4fb2;
+  border-bottom: 2px solid #1f4fb2;
+  padding-bottom: 6px;
+  margin: 20px 0 12px;
+}
+
+h3 {
+  color: #2c6db8;
+  border-left: 4px solid #2c6db8;
+  padding-left: 10px;
+  margin: 24px 0 10px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul, ol {
+  margin-left: 22px;
+}
+ul li, ol li {
+  margin-bottom: 6px;
+}
+
+
+pre {
+  background: #f1f4f9;
+  border-left: 4px solid #1f4fb2;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 28px 0;
+}
+
+/
+
+select TOPIC_ID,
+       CATEGORY,
+       TOPIC_NO,
+       TITLE,
+       SUMMARY
+  from COURSE_TOPICS
+  
+/
+
+
+
+                                           <!-- PL/SQL MODULE 1 : BASICS -->
+
+<h2>Module 1: PL/SQL Basics</h2> 
+
+<p>
+<b>PL/SQL</b> stands for <b>Procedural Language / Structured Query Language</b>.
+It is Oracle’s extension of SQL that allows us to write
+<b>procedural code</b> inside the database.
+</p>
+
+<hr>
+
+<h3>1. Introduction to PL/SQL</h3>
+
+<p>
+PL/SQL is a block-structured programming language that combines
+<b>SQL statements</b> with <b>procedural features</b> like conditions and loops.
+</p>
+
+<p>
+It is mainly used to write business logic directly inside the database.
+</p>
+
+<hr>
+
+<h3>2. Advantages of PL/SQL</h3>
+
+<ul>
+  <li>Improves performance by reducing network traffic</li>
+  <li>Supports variables, loops, and conditions</li>
+  <li>Better security for database logic</li>
+  <li>Easy integration with SQL</li>
+  <li>Reusable code using procedures and functions</li>
+</ul>
+
+<hr>
+
+<h3>3. PL/SQL Architecture</h3>
+
+<p>
+PL/SQL code is processed by the <b>PL/SQL Engine</b>.
+</p>
+
+<p>
+If the code contains SQL statements, they are passed to the
+<b>SQL Engine</b>. Procedural statements are handled by the PL/SQL Engine itself.
+</p>
+
+<hr>
+
+<h3>4. PL/SQL Block Structure</h3>
+
+<p>
+A PL/SQL program is written in blocks.
+Each block has three sections:
+</p>
+
+<ul>
+  <li><b>DECLARE</b> – Used to declare variables (optional)</li>
+  <li><b>BEGIN</b> – Contains executable statements (mandatory)</li>
+  <li><b>EXCEPTION</b> – Handles errors (optional)</li>
+</ul>
+
+<b>Syntax:</b>
+<pre>
+DECLARE
+  -- variable declarations
+BEGIN
+  -- executable statements
+EXCEPTION
+  -- error handling
+END;
+</pre>
+
+<hr>
+
+<h3>5. Types of PL/SQL Blocks</h3>
+
+<p>
+There are three types of PL/SQL blocks:
+</p>
+
+<ol>
+  <li><b>Anonymous Block</b> – Written and executed once</li>
+  <li><b>Procedure</b> – Stored program that performs an action</li>
+  <li><b>Function</b> – Stored program that returns a value</li>
+</ol>
+
+<p>
+Among these, <b>Anonymous Blocks</b> are mainly used for learning and testing.
+</p>
+
+<hr>
+
+<h2>In Simple Words</h2>
+
+<p>
+<b>PL/SQL</b> allows us to write logic inside the database using SQL + programming features.
+</p>
+
+<p>
+<b>Module 1</b> explains what PL/SQL is, why it is used,
+how it works internally, and the basic structure of PL/SQL programs.
+</p>
+
+  
+/* == PL/SQL MODULE 1 CSS == */
+
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;              
+  background-color: #ffffff;
+}
+
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 5px solid #1f4fb2; 
+  color: #1f4fb2;                 
+  font-size: 22px;
+}
+
+
+h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: #2c6db8;  
+  font-size: 18px;
+}
+
+p {
+  margin: 8px 0;
+  color: #333;      
+}
+
+
+ul,
+ol {
+  margin-left: 22px;
+  margin-bottom: 12px;
+}
+
+ul li,
+ol li {
+  margin: 6px 0;
+  color: #333;    
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+
+pre {
+  background: #f1f4f9;
+  border-left: 4px solid #1f4fb2;  
+  padding: 12px 14px;
+  margin: 10px 0 18px;
+  font-size: 14px;
+  border-radius: 5px;
+  overflow-x: auto;
+  color: #000;    
+}
+
+b {
+  color: #000;   
+}
+
+
+p b {
+  color: #1f4fb2; 
+}
+
+
+.sql-card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+}
+/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oracle APEX – Module 1</title>
+
+<style>
+/*  ORACLE APEX MODULE 1 CSS */
+
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #ffffff;
+}
+
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 5px solid #1f4fb2;
+  color: #1f4fb2;
+  font-size: 22px;
+}
+
+
+h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: #2c6db8;
+  font-size: 18px;
+}
+
+
+p {
+  margin: 8px 0;
+}
+
+
+ul, ol {
+  margin-left: 22px;
+  margin-bottom: 12px;
+}
+
+ul li, ol li {
+  margin: 6px 0;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+
+.note {
+  background: #f1f4f9;
+  border-left: 4px solid #1f4fb2;
+  padding: 12px 14px;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 17px; }
+}
+</style>
+</head>
+
+<body>
+
+<!--  ORACLE APEX MODULE 1 : INTRODUCTION -->
+
+ <h2>Module 1: Oracle APEX Introduction</h2> 
+
+<p>
+This module introduces <b>Oracle Application Express (APEX)</b>,
+a low-code development platform used to build
+<b>secure, scalable, and data-driven web applications</b>.
+</p>
+
+<hr>
+
+<h3>1. What is Oracle APEX?</h3>
+
+<p>
+<b>Oracle APEX</b> is a low-code development tool
+provided by Oracle that allows developers to create
+web applications using <b>SQL and PL/SQL</b>.
+</p>
+
+<div class="note">
+APEX applications run inside the Oracle Database
+and do not require external application servers.
+</div>
+
+<hr>
+
+<h3>2. History & Versions of APEX</h3>
+
+<p>
+Oracle APEX was originally known as
+<b>HTML DB</b>.
+</p>
+
+<p>
+It was later renamed to Oracle Application Express
+and is continuously improved with every release.
+</p>
+
+<hr>
+
+<h3>3. APEX Architecture</h3>
+
+<p>
+Oracle APEX works on a
+<b>three-tier architecture</b>:
+</p>
+
+<ul>
+  <li>Web Browser (Client)</li>
+  <li>Web Listener (ORDS)</li>
+  <li>Oracle Database</li>
+</ul>
+
+<p>
+All business logic is stored inside the database
+using SQL and PL/SQL.
+</p>
+
+<hr>
+
+<h3>4. APEX vs Traditional Development</h3>
+
+<p>
+In traditional development,
+developers need separate layers for UI, logic, and database.
+</p>
+
+<p>
+In Oracle APEX,
+<b>everything is managed inside the database</b>,
+which reduces development time and complexity.
+</p>
+
+<hr>
+
+<h3>5. APEX Use Cases & Advantages</h3>
+
+<p>
+Oracle APEX is commonly used for:
+</p>
+
+<ul>
+  <li>Enterprise internal applications</li>
+  <li>Rapid application development</li>
+  <li>Data-driven dashboards</li>
+  <li>Modern replacement for Forms</li>
+</ul>
+
+<div class="note">
+<b>Advantages:</b> Fast development, high security,
+low cost, and tight database integration.
+</div>
+
+<hr>
+
+<h2>In Simple Words</h2>
+
+<p>
+<b>Module 1</b> explains what Oracle APEX is,
+how it works, and why it is widely used
+for modern database applications.
+</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Oracle APEX – Module 2</title>
+
+<style>
+/*  ORACLE APEX MODULE 2 CSS */
+
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  background-color: #ffffff;
+}
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  border-left: 5px solid #1f4fb2;
+  color: #1f4fb2;
+  font-size: 22px;
+}
+
+h3 {
+  margin-top: 22px;
+  margin-bottom: 8px;
+  color: #2c6db8;
+  font-size: 18px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+ul, ol {
+  margin-left: 22px;
+  margin-bottom: 12px;
+}
+
+ul li, ol li {
+  margin: 6px 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 30px 0;
+}
+
+.note {
+  background: #f1f4f9;
+  border-left: 4px solid #1f4fb2;
+  padding: 12px 14px;
+  margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 17px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ORACLE APEX MODULE 2 : WORKSPACE & ENVIRONMENT -->
+
+ <h2>Module 2: APEX Workspace & Environment</h2> 
+
+<p>
+This module explains how to access Oracle APEX,
+create a workspace, and understand the APEX development environment.
+</p>
+
+<hr>
+
+<h3>6. Creating APEX Workspace</h3>
+
+<p>
+A <b>Workspace</b> is a logical area in Oracle APEX
+where applications, database objects, and users are managed.
+</p>
+
+<div class="note">
+One workspace can contain multiple applications
+and database schemas.
+</div>
+
+<hr>
+
+<h3>7. APEX Login & Navigation</h3>
+
+<p>
+After workspace creation, users can log in
+using the <b>workspace name</b>, <b>username</b>,
+and <b>password</b>.
+</p>
+
+<p>
+Once logged in, the APEX home page is displayed.
+</p>
+
+<hr>
+
+<h3>8. APEX Home Dashboard</h3>
+
+<p>
+The <b>APEX Home Dashboard</b> provides access to:
+</p>
+
+<ul>
+  <li>App Builder</li>
+  <li>SQL Workshop</li>
+  <li>Team Development</li>
+  <li>Gallery</li>
+</ul>
+
+<div class="note">
+Most development work is done using
+<b>App Builder</b> and <b>SQL Workshop</b>.
+</div>
+
+<hr>
+
+<h3>9. Understanding APEX Components</h3>
+
+<p>
+Oracle APEX is divided into different components,
+each used for a specific purpose.
+</p>
+
+<ul>
+  <li><b>App Builder</b> – Create and manage applications</li>
+  <li><b>SQL Workshop</b> – Work with database objects</li>
+  <li><b>Team Development</b> – Manage tasks and bugs</li>
+</ul>
+
+<hr>
+
+<h3>10. APEX Application Builder Overview</h3>
+
+<p>
+<b>Application Builder</b> is the core component
+used to design pages, regions, items, and logic.
+</p>
+
+<p>
+It provides a <b>low-code environment</b>
+that reduces manual coding.
+</p>
+
+<div class="note">
+Using Application Builder,
+developers can create applications
+without writing large amounts of code.
+</div>
+
+<hr>
+
+<h2>In Simple Words</h2>
+
+<p>
+<b>Module 2</b> explains how to enter the Oracle APEX world,
+create a workspace, understand the dashboard,
+and start working with Application Builder.
+</p>
+
+</body>
+</html>
